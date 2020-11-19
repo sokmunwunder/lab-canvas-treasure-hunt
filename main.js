@@ -2,59 +2,55 @@
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
 
-const width = canvas.width;
-const height = canvas.height;
+//const width = canvas.width;
+//const height = canvas.height;
 
 // Iteration 1
-function drawGrid() {
+//function drawGrid() {
   // TODO: write the code of the function
-context.strokeStyle= "black";
-context.lineWidth = 2;
+////context.strokeStyle= "black";
+//context.lineWidth = 2;
 
 
-context.beginPath();
-context.moveTo(0,0);
-context.lineTo(500,0);
-context.lineTo(500,500);
-context.lineTo(0,500);
-context.lineTo(0,0);
-context.stroke();
-context.closePath();
+//context.beginPath();
+//context.moveTo(0,0);
+//context.lineTo(500,0);
+//context.lineTo(500,500);
+//context.lineTo(0,500);
+//context.lineTo(0,0);
+//context.stroke();
+//context.closePath();
 
+function drawGrid(x,y) {
 
-
-for(let x=0; x<11; x++){
+for(let a=0; a<11; a++){
 context.strokeStyle="black";
 context.linewidth=2;
 context.beginPath();
-context.moveTo(50*x, 0);
-context.lineTo(50*x, height);
+context.moveTo(50*a, 0);
+context.lineTo(50*a, 500);
 context.stroke;
 context.closePath();
-
-
-};
-
-for(let y=0; y>11; y++){
-context.strokeStyle="black";
-context.linewidth=2;
-context.beginPath();
-context.moveTo(0, y*50);
-context.lineTo(width, y*50);
-context.stroke;
-context.closePath();
-};
-console.log("test");
 }
 
+for(let b=0; b<11; b++){
+context.strokeStyle="black";
+context.linewidth=2;
+context.beginPath();
+context.moveTo(0, b*50);
+context.lineTo(500, b*50);
+context.stroke;
+context.closePath();
+}
+};
+
+drawGrid(50,100);
 
 
-//drawGrid(0,0);
-
-function drawEverything() {
+function drawEverything(x,y) {
   drawGrid();
   // drawPlayer()
   // drawTreasure()
 }
 
-drawEverything();
+drawEverything(0,0);
