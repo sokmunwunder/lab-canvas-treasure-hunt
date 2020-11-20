@@ -2,8 +2,8 @@
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
 
-//const width = canvas.width;
-//const height = canvas.height;
+const width = canvas.width;
+const height = canvas.height;
 
 // Iteration 1
 //function drawGrid() {
@@ -29,7 +29,7 @@ context.linewidth=2;
 context.beginPath();
 context.moveTo(50*a, 0);
 context.lineTo(50*a, 500);
-context.stroke;
+context.stroke();
 context.closePath();
 }
 
@@ -39,7 +39,7 @@ context.linewidth=2;
 context.beginPath();
 context.moveTo(0, b*50);
 context.lineTo(500, b*50);
-context.stroke;
+context.stroke();
 context.closePath();
 }
 };
